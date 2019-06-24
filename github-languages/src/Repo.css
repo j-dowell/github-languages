@@ -1,0 +1,17 @@
+.repo-container {
+    margin: 10px;
+    border: 1px solid gainsboro;
+    box-shadow: 1px 2px 5px 0px gainsboro;
+    border-radius: 16px;
+    transition: 0.3s ease-in-out all;
+}
+
+.repo-container:hover {
+    box-shadow: 1px 2px 15px 0px gainsboro;
+    transition: 0.3s ease-in-out all;
+}
+
+.recharts-wrapper {
+    margin: auto;
+    padding: 10px;
+}

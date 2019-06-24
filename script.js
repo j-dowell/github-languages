@@ -4,7 +4,7 @@ const githubUser = process.env.GITHUB_USER;
 const token = process.env.TOKEN;
 
 // Get list of user's repos
-const getRepos = (username) => {
+const getRepos = async (username) => {
   let repoList = [];
   const options = {
     uri: `https://api.github.com/users/${username}/repos?access_token=${token}`,
@@ -22,9 +22,7 @@ const getRepos = (username) => {
       return repoList
     })
     .catch((err) => {
-        // API call failed...
         console.log(err)
-        console.error
     });
 }
 
@@ -59,13 +57,21 @@ const getLanguage = (repo, username) => {
       });
 }
 
+let languages = []
+
 // Looping over all of user's repos and retreiving language info
-const getAllRepoLanguages = (repoList) => {
-  repoList.forEach(res => {
-    getLanguage(res, githubUser).then(res => console.log(res))
+const getAllRepoLanguages = async (repoList) => {
+  await repoList.forEach(res => {
+    getLanguage(res, githubUser).then(languages.push(res))
   })
 }
 
-getRepos(githubUser).then(res => {
-  getAllRepoLanguages(res);
-}); 
+let x = await getRepos(githubUser)
+let y = await getAllRepoLanguages(x)
+console.log(y)
+
+// getRepos(githubUser).then(res => {
+//   getAllRepoLanguages(res);
+// }); 
+
+// console.log(languages)
