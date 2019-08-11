@@ -1,11 +1,9 @@
 require('dotenv').config();
 const axios = require('axios');
 const R = require('ramda')
-// const githubUser = process.env.GITHUB_USER;
-// const githubToken = process.env.TOKEN;
+const githubUser = process.env.GITHUB_USER;
+const githubToken = process.env.TOKEN;
 var parse = require('parse-link-header');
-
-
 
 const getRepos = async (username = githubUser, page = 1, token = githubToken) => {
     const repos = []

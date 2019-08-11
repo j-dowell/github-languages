@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import * as R from 'ramda'
-import { Pie, PieChart, Cell, Sector } from 'recharts'
-import { COLORS } from './color';
+import React, { Component } from 'react';
+import * as R from 'ramda';
+import { Pie, PieChart, Cell, Sector } from 'recharts';
+import { COLORS } from './utils/color';
 
 import './Repo.css'
 

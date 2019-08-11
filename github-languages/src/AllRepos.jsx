@@ -1,5 +1,5 @@
 import React from 'react'
-import { isNotEmpty } from './utils';
+import { isNotEmpty } from './utils/utils';
 import Repo from './Repo';
 
 const AllRepos = ({ repos, width, height }) =>

@@ -97,6 +97,11 @@
   align-self: center;
   z-index: 2;
   height: 20px;
+  outline: none;
+}
+
+.name-input.active {
+  box-shadow: 1px 1px 1px 1px grey;
 }
 
 .total-container {

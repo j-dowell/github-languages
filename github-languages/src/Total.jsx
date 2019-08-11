@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Repo from './Repo';
 
 const Total = React.memo(({ languages, width, height }) => 
@@ -10,4 +10,5 @@ const Total = React.memo(({ languages, width, height }) =>
         />
     </div>
 )
-export default Total
+
+export default Total;
